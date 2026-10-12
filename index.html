@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#100713;color:white;text-align:center;
+  font-family:Poppins,sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(ellipse at top,#65133f,transparent 60%),
+  radial-gradient(ellipse at bottom,#43152d,transparent 60%);
+}
+h1,.script{font-family:'Great Vibes',cursive;color:#ff91bc}
+h1{font-size:clamp(65px,13vw,110px);text-shadow:0 0 30px #ff4f9d88}
+header{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:25px;
+}
+.tag{letter-spacing:4px;color:#ffdca7;font-size:11px}
+p{line-height:1.9;color:#ead5e3;font-size:14px}
+button{
+  cursor:pointer;border:0;border-radius:40px;padding:14px 25px;
+  margin:15px 5px;font-weight:600;font-family:inherit;
+  background:linear-gradient(120deg,#ff9dc6,#ffe2a6);color:#341020;
+  transition:.3s;
+}
+button:hover{transform:scale(1.06);box-shadow:0 0 25px #ff70ac88}
+section{padding:65px 18px}
+.script{font-size:clamp(42px,8vw,65px);margin-bottom:12px}
+.gallery{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;max-width:720px;margin:30px auto;
+}
+.photo{
+  overflow:hidden;border-radius:16px;background:#32182b;
+  border:1px solid #ff9dc655;
+  opacity:0;transform:translateY(25px);
+  transition:opacity .8s,transform .8s;
+}
+.photo.show{opacity:1;transform:translateY(0)}
+.photo img{
+  display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
+  transition:transform .5s;
+}
+.photo:hover img{transform:scale(1.06)}
+.caption{padding:12px;font-size:12px;color:#ffe1ed}
+.card{
+  max-width:600px;margin:25px auto;padding:28px 22px;
+  border:1px solid #ffb5d055;border-radius:20px;
+  background:#ffffff09;box-shadow:0 10px 50px #0004;
+}
+#letter{display:none;animation:reveal 1s ease}
+#letter.open{display:block}
+.music{
+  position:fixed;bottom:18px;right:15px;z-index:10;
+  background:#ffb1cf;color:#311020;padding:12px 17px;
+}
+.heart{
+  position:fixed;bottom:-40px;z-index:3;pointer-events:none;
+  animation:float 6s linear forwards;
+}
+@keyframes float{
+  to{transform:translateY(-110vh) rotate(40deg);opacity:0}
+}
+@keyframes reveal{
+  from{opacity:0;transform:translateY(20px) scale(.95)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+.sparkle{animation:glow 2s infinite alternate}
+@keyframes glow{
+  from{text-shadow:0 0 5px #ff8eb8}
+  to{text-shadow:0 0 25px #ff4f9d,0 0 45px #ff4f9d}
+}
+footer{padding:35px 15px;color:#c6a9bd;font-size:12px}
+@media(max-width:400px){
+ .gallery{gap:9px}
+ .caption{font-size:11px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="tag">✨ MADE WITH LOVE FOR MY BEST FRIEND ✨</div>
+
+<h1 class="sparkle">Happy Birthday</h1>
+
+<h2 style="color:#ffe1a9;font-size:32px">
+  Nandani Rana 💗
+</h2>
+
+<p style="max-width:450px;margin-top:18px">
+  To my favourite human, my partner in crime,
+  my happiness and my forever best friend.
+  You deserve all the love and happiness in this world! 🦋
+</p>
+
+<button onclick="startSurprise()">
+  🎁 Open Your Special Surprise
+</button>
+</header>
+
+<section id="memories">
+  <h2 class="script">Beautiful Memories 📸</h2>
+  <p>Every picture has a story, and every story is special.</p>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="nandani 1.jfif" alt="Memory 1">
+      <div class="caption">A beautiful memory 💗</div>
+    </div>
+    <div class="photo">
+      <img src="nandani 2.jfif" alt="Memory 2">
+      <div class="caption">cutiee ✨</div>
+    </div>
+    <div class="photo">
+      <img src="nandani 3.jfif" alt="Memory 3">
+      <div class="caption">Moments to remember 🌸</div>
+    </div>
+    <div class="photo">
+      <img src="nandani 4.jfif" alt="Memory 4">
+      <div class="caption">Beautiful Smile ❤️</div>
+    </div>
+    <div class="photo">
+      <img src="nandani 5.jfif" alt="Memory 5">
+      <div class="caption">Another beautiful moment 🌟</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="script">A Little Wish For You 💌</h2>
+  <div class="card">
+    <p>
+      May your smile always shine brighter than the stars.
+      May your dreams find their wings, your heart find peace,
+      and your life be filled with love, laughter and endless
+      beautiful surprises. 🦋
+    </p>
+    <br>
+    <p>Today, tomorrow and always — keep shining! ✨</p>
+    <button onclick="openLetter()">💌 Read Your Secret Message</button>
+
+    <div id="letter">
+      <br>
+      <h2 class="script">Just For You ❤️</h2>
+      <p id="secretText">
+  Dear Nandani Rana 💗
+
+  Happy Birthday to my favourite person and
+  the most special best friend! 🥹🎂
+
+  Thank you for being a part of my life,
+  for all the laughs, crazy moments, silly talks
+  and beautiful memories we share.
+
+  I hope your life is always filled with smiles,
+  success, love and endless happiness.
+  May every dream of yours come true. ✨
+
+  No matter how busy life gets or how much
+  things change, I hope our friendship always
+  stays just as special.
+
+  You are not just my best friend,
+  you are a beautiful part of my story. 🫶
+
+  Keep smiling, keep shining and stay the
+  amazing person you are!
+
+  HAPPY BIRTHDAY, NANDANI RANA! 🎂💖
+
+  — From your best friend, with love ❤️
+</p>
+      <p style="margin-top:15px">With lots of love, always. 🌹</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div style="font-size:65px">🎂</div>
+  <h2 class="script">Forever Best Friends ❤️</h2>
+
+<p>
+  Different days, different memories,
+  but one friendship I'll always cherish. 💗
+</p>
+
+<h2 style="margin-top:25px;color:#ffdca7">
+  Nandani Rana ✨
+</h2>
+
+<p>You're one of a kind. Never forget that! 🌸</p> </section>
+
+<footer>
+  Made with ❤️ just for you<br>
+  <span class="script" style="font-size:35px">Happy Birthday!</span>
+</footer>
+
+<audio id="song" src="c:\Users\DELL\Desktop\nandani rana\Birthday - Jordan Sandhu.mp3" loop></audio>
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+  🎵 Play Music
+</button>
+
+<script>
+const audio = document.getElementById("song");
+
+function startSurprise(){
+  audio.play().then(()=>{
+    document.getElementById("musicBtn").textContent="🎵 Pause Music";
+  }).catch(()=>{
+    alert("Tap the Play Music button to start your song 🎵");
+  });
+  document.getElementById("memories").scrollIntoView({behavior:"smooth"});
+  confettiHearts();
+}
+
+function toggleMusic(){
+  if(audio.paused){
+    audio.play().then(()=>{
+      document.getElementById("musicBtn").textContent="🎵 Pause Music";
+    }).catch(()=>alert("Please check that song.mp3 is in the same folder."));
+  }else{
+    audio.pause();
+    document.getElementById("musicBtn").textContent="🎵 Play Music";
+  }
+}
+
+function openLetter(){
+  document.getElementById("letter").classList.toggle("open");
+  confettiHearts();
+}
+
+function celebrate(){
+  document.getElementById("celebration").textContent=
+    "🎉🎂🎈🥳💖✨ Happy Birthday! ✨💖🥳🎈🎂🎉";
+  confettiHearts();
+}
+
+function confettiHearts(){
+  const symbols=["💗","💕","💖","✨","🌸","💝","❤️"];
+  for(let i=0;i<28;i++){
+    const el=document.createElement("span");
+    el.className="heart";
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.fontSize=(15+Math.random()*22)+"px";
+    el.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),7500);
+  }
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting)entry.target.classList.add("show");
+  });
+},{threshold:.15});
+
+document.querySelectorAll(".photo").forEach(el=>observer.observe(el));
+
+setInterval(()=>{
+  const el=document.createElement("span");
+  el.className="heart";
+  el.textContent=["♡","💗","✨","💕"][Math.floor(Math.random()*4)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.fontSize=(14+Math.random()*20)+"px";
+  el.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),10000);
+},650);
+</script>
+</body>
+</html>
